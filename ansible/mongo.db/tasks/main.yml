@@ -57,7 +57,7 @@
 - name: create admin user
   mongodb_user:
     database: admin
-    name: root
+    name: admin
     password: abcde
     state: present
     roles: dbAdminAnyDatabase
@@ -76,9 +76,9 @@
       Description=restfulweb Daemon
       After=network.target
       [Service]
-      Environment=MONGO_DB=bddmygod
-      Environment=MONGO_ADMIN=user
-      Environment=MONGO_PWD=666
+      Environment=MONGO_DB=admin
+      Environment=MONGO_ADMIN=admin
+      Environment=MONGO_PWD=abcde
       Environment=MONGO_URL=10.0.3.17
       Environment=MONGO_PORT=27017
       Type=simple
