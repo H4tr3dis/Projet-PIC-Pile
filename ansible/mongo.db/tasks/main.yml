@@ -54,12 +54,13 @@
     state: restarted
     enabled: yes
 
-- mongodb_user:
-   database: admin
-   name: root
-   password: w32jjYdMZr
-   roles: readWrite
-   state: present
+- name: create admin user
+  mongodb_user:
+    database: admin
+    name: root
+    password: abcde
+    state: present
+    roles: dbAdminAnyDatabase
 
 - name: create file service restfulweb
   file:
