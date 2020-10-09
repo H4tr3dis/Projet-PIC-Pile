@@ -1,13 +1,8 @@
-###########################################################
-###                   Projet Mambo No. 5                ###
-###                    Pourquoi ce nom ?                ###
-### Parce qu'il s'agit du 5ème Projet du groupe Mambo ! ###
-###########################################################
+Développement d'une pile complète de déploiement continu via une PIC as code
 
-Ce projet traite du déploiement d'une plateforme d'intégration continue (PIC) tout en intégrant des outils de CI/CD. Le but est de développer une pile complète de déploiement continue permettant de livrer sur différents environnements techniques de l’entreprise : test et production.
-Toute l'infrastructure sera créée avec des ressources sur le Cloud Azure.
-La PIC est constituée d’une machine Master, où Jenkins, Git et Java seront installés, et d’une machine Slave rattachée à la machine Master par une connexion ssh, où Java8, Java12, Git, Terraform, Maven, Ansible et Docker seront installés.
-La pile complète est constituée de Serveurs Test et Prod ainsi que de deux bases de données (BDD), MongoDB.
+
+
+Ce développement traite du déploiement d'une plateforme d'intégration continue (PIC) tout en intégrant des outils de CI/CD. Le but est de développer une pile complète de déploiement continue permettant de livrer sur différents environnements techniques de l’entreprise cible : test et production. Toute l'infrastructure sera créée avec des ressources sur le Cloud Azure. La PIC est constituée d’une machine Master, où Jenkins, Git et Java seront installés, et d’une machine Slave rattachée à la machine Master par une connexion ssh, où Java8, Java12, Git, Terraform, Maven, Ansible et Docker seront installés. La pile complète est constituée de 2 Serveurs, Test et Prod, ainsi que de deux bases de données MongoDB.
 
 Pré-requis :
 Installer VirtualBox et Vagrant sur votre poste de travail.
@@ -58,8 +53,9 @@ Cette pipeline effectue les tâches suivantes :
 Démarrage :
 Connexion au serveur test : mounasylvaintest.francentral.cloudapp.azure.com/
 
+
 Résultat :
-Au 06/03/2020 à 16h59, notre pipeline jenkins est fonctionnel. Le code est fonctionnel et compil. Ceci étant nous n'arrivons pas encore à avoir une connexion. En effet, nous avons seulement effectué le travail sur le serveur test. Le déploiment sur le serveur prod est seulement un duplicata des étapes précédements effectuées sur la branche master.
+Le pipeline jenkins est fonctionnel. Le code est fonctionnel et compile. Les seveurs test et pro sont fonctionnels. Les accès aux bases MongoDB Test et Prod sont opérationnels.
 
 Fabriqué avec :
 - Git/Github: Dépôt distant
